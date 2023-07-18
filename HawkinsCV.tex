@@ -2,8 +2,8 @@
 \documentclass[a4paper,10pt]{report}
 
 \pagestyle{plain}
-\pagenumbering{gobble}
-% \pagenumbering{arabic}
+% \pagenumbering{gobble}
+\pagenumbering{arabic}
 
 % \setcounter{page}{215}
 
@@ -21,12 +21,17 @@
 %Setup hyperref package, and colours for links
 \usepackage{hyperref}
 \usepackage{longtable}
+\usepackage[none]{hyphenat}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 %FONTS
 \usepackage[sfdefault]{inter}
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont{Inter} %Set font to Helvetica
+
+\usepackage[outline]{contour}
+\contourlength{2pt}
+\contournumber{10}
 
 %CV Sections inspired by:
 %http://stefano.italians.nl/archives/26
@@ -43,6 +48,9 @@
 \setlength{\TPVertModule}{\TPHorizModule}
 \textblockorigin{1mm}{0.65\paperheight}
 \setlength{\parindent}{0pt}
+
+\usepackage{enumitem}
+\setlist[itemize]{topsep=0pt, partopsep=0pt, align=parleft, left=0pt..1em}
 
 %-------------Document Size -----------------------
 \usepackage{geometry}
@@ -61,7 +69,7 @@
 %--------------------TITLE-------------
 \par{
 	\centering{
-		\Huge Dakota \textsc{Hawkins} \bigskip\par \Large Curriculum Vitae
+		\Huge Dakota Y. \textsc{Hawkins} \bigskip\par \Large Curriculum Vitae
 	}\bigskip\par
 }
 
@@ -88,68 +96,132 @@
 %Section: Work Experience at the top
 \section{\color{linkcolour}{Professional History}}
 \begin{tabular}{r|p{11cm}}
-	\textsc{2016 -- 2023} & Boston University, Boston, MA                                                                                                                                                   \\
-	                      & Doctoral Student                                                                                                                                                                \\
-	                      & \textbf{Thesis}: \emph{\small{Understanding Cell-Type Diversification During Developmental Pattern Formation in Sea urchin Embryos Using Single Cell and Molecular Approaches}} \\
-	\multicolumn{2}{c}{}                                                                                                                                                                                    \\
-	\textsc{2015 -- 2016} & Pacific Northwest National Laboratory, Richland, WA                                                                                                                             \\
-	                      & \emph{Post Baccalaureate Research Assistant}                                                                                                                                    \\
+	\textsc{2016 -- 2023} & Boston University, Boston, MA                                                                                                                                                              \\
+	                      & Doctoral Student                                                                                                                                                                           \\
+	                      & \textbf{Thesis}: \emph{\footnotesize{Understanding Cell-Type Diversification During Developmental Pattern Formation in Sea urchin Embryos Using Single Cell and Molecular Approaches}}     \\
+	\multicolumn{2}{c}{}                                                                                                                                                                                               \\[-0.5em]
+	\textsc{2015 -- 2016} & Pacific Northwest National Laboratory, Richland, WA                                                                                                                                        \\
+	                      & \emph{Post Baccalaureate Research Assistant}                                                                                                                                               \\
 	                      & \footnotesize{Worked in the Applied Statistics and Computational Modeling
-		group under the Computational and Statistical Analysis division.
-		Research focused on bioinformatic-based projects such as
-		analysis of -omics data and development of new quantitative
-	tools to assist researchers.}                                                                                                                                                                           \\
-	\multicolumn{2}{c}{}                                                                                                                                                                                    \\
+	group under the Computational and Statistical Analysis division. Developed new quantitative tools across various projects to analyize -omics datasets, including microbiome, metabolomic, and proteomic projects.} \\
+	\multicolumn{2}{c}{}                                                                                                                                                                                               \\[-0.5em]
 
-	\textsc{2013 -- 2015} & Westminster College, Salt Lake City, UT                                                                                                                                         \\
-	                      & \emph{QUARC Student Statistics Consultant}                                                                                                                                      \\
+	\textsc{2013 -- 2015} & Westminster College, Salt Lake City, UT                                                                                                                                                    \\
+	                      & \emph{QUARC Student Statistics Consultant}                                                                                                                                                 \\
 	                      & \footnotesize{Helped develop quantitative reasoning on Westminster College Campus.
 		Responsibilities focused on aiding in statistical analysis for
 		local projects, teaching in-class lessons, and devoloping new
-	quantitative literacy courses for Westminster College}                                                                                                                                                  \\
-	\multicolumn{2}{c}{}                                                                                                                                                                                    \\
+	quantitative literacy courses for Westminster College}                                                                                                                                                             \\
+	\multicolumn{2}{c}{}                                                                                                                                                                                               \\
 \end{tabular}
 
 %Section: Research
 \section{\color{linkcolour}{Research}}
 % \begin{tabular}{rp{10cm}}
-\begin{longtable}{rp{10cm}}
-	\textsc{May 2017 -- Jun 2023}    & Bradham Laboratory at Boston University, Boston, MA                                           \\
-	                                 & \footnotesize{Developing novel algorithms to identify shared cell-types across treatments
-		in scRNA-seq data, and to integrate spatial information from fluorescence
-	imaging with high-throughput scRNA-seq.}                                                                                         \\
-	\textsc{Jan. 2017 -- May 2017}   & Paola Sebastiani Laboratory at Boston University, Boston, MA                                  \\
-	                                 & \footnotesize{Performed eQTL analysis to establish tissue-specific biomarkers for
-	Alzheimer's disease.}                                                                                                            \\
-	\textsc{Sept. 2016 -- Dec. 2016} & Stefano Monti Laboratory at Boston University, Boston, MA                                     \\
-	                                 & \footnotesize{Leveraged general linear models to determine cancer-specific immune response in
-	tumor cells.}                                                                                                                    \\
-	\textsc{Jul. 2016 -- Sept. 2016} & James Galagan Laboratory at Boston University, Boston, MA                                     \\
-	                                 & \footnotesize{Conducted ChIP-Seq and RNA-Seq experiments to help map the transcriptional
-	regulatory network of \emph{E.\ coli}.}                                                                                          \\
-	\textsc{Mar. 2016 -- Jul. 2016}  & Pacific Northwest National Laboratory, Richland, WA                                           \\
-	                                 & \footnotesize{Aided in protein-based stable isotope probing experiments by
-	running analysis pipelines to  calculate labeling statistics.}                                                                   \\
-	\textsc{Nov. 2015 -- Jul. 2016}  & Pacific Northwest National Laboratory, Richland, WA                                           \\
-	                                 & \footnotesize{Provided statistical support to determine differences in -omic
-		make-up of the fecal microbiome between successful and
-	unsuccesful gastric bypass patients.}                                                                                            \\
-	\textsc{Jul. 2015 -- Feb. 2016}  & Pacific Northwest National Laboratory, Richland, WA                                           \\
-	                                 & \footnotesize{Helped create and implement displays and algorithms to visualize
-	and quantify shotgun proteomic data.}                                                                                            \\
-	\textsc{2013 -- 2014}            & Westminster College, Salt Lake City, UT                                                       \\
-	                                 & \footnotesize{Developed novel program in Python for automating detection of
-	singing on the nest in field recordings of Northern Mockingbirds.}                                                               \\
-	\textsc{2012 -- 2013}            & Westminster College, Salt Lake City, UT                                                       \\
-	                                 & \footnotesize{Collected field recordings of House Finch songs to compare urban
-	and non-urban song dialects.}                                                                                                    \\
-	\textsc{Jan. 2012 -- Jun. 2012}  & University of Utah Health Care, Salt Lake City, UT
-	\\& \footnotesize{Aided in genetic analysis running reverse transcription and PCR analysis.}
+\begin{longtable}{r|p{10cm}}
+	\textsc{May 2017 -- Jun. 2023}   & \textbf{Cyndi Bradham Laboratory} Boston University, Boston, MA    \\
+	                                 & \footnotesize{
+		\vspace{-3.5mm}
+		% \hspace{-5mm}
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			% \setlength\leftmargini{-5mm}
+			% \setlength\leftmarginii{-5mm}
+			\item Developed a novel machine learning algorithm to accurately identify cell states in mixed-condition scRNA-seq datasets.
+			\item Mechanisictly characterized cell type diversication of skeletal lineage cells in sea urchins using multi-condition scRNA-seq data consisting of 5 time points and 6 experimental conditions.
+			\item Developed novel computational and machine learning workflows to integrate 3D single-molecule fluorescence imaging data with scRNA-seq data to infer embryonic locations of scRNA-seq defined cell types.
+		\end{itemize}
+	} \vspace{-3.5mm}                                                                                     \\
+	\multicolumn{2}{c}{}                                                                                  \\[-0.75em]
+	\textsc{Jan. 2017 -- May 2017}   & \textbf{Paola Sebastiani Laboratory} Boston University, Boston, MA \\
+	                                 & \footnotesize{
+		\vspace{-3.5mm}
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Performed eQTL analysis on whole-genome and bulk RNA-seq data to establish tissue-specific biomarkers for Alzheimer's disease.
+		\end{itemize}
+	} \vspace{-3.5mm}                                                                                     \\
+	\multicolumn{2}{c}{}
+	\\[-0.75em]
+	\textsc{Sept. 2016 -- Dec. 2016} & \textbf{Stefano Monti Laboratory} Boston University, Boston, MA    \\
+	                                 & \footnotesize{
+		\vspace{-3.5mm}
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Determined cancer-specific immune response in
+			      tumor cells by leveraging general linear models to identify key signatures in bulk RNA-seq.
+		\end{itemize}
+	} \vspace{-3.5mm}                                                                                     \\
+	\multicolumn{2}{c}{}
+	\\[-0.75em]
+	\textsc{Jul. 2016 -- Sept. 2016} & \textbf{James Galagan Laboratory} Boston University, Boston, MA    \\                                                                  	                                 & \footnotesize{
+		\vspace{-3.5mm}
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Conducted and analyzed ChIP-seq and RNA-seq experiments to help map the transcriptional
+			      regulatory network of \emph{E.\ coli}.
+		\end{itemize}
+	} \vspace{-3.5mm}                                                                                     \\
+	\multicolumn{2}{c}{}
+	\\[3.75em]
+	\textsc{Jul. 2015 -- Jul. 2016}  & \textbf{Pacific Northwest National Laboratory}, Richland, WA       \\
+	                                 & \footnotesize{
+		\vspace{-3.5mm}
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Performed multi-omic analysis to identify key signal differences in metabolomic consumption and microbiome composition between successful and
+			      unsuccessful gastric bypass patients.
+			\item Ran analysis pipelines for protein-based stable isotope experiments to generate final results and summary statistics.
+			\item Created software workflows to visualize and quantify spliceforms in high-throughput proteomic data.
+		\end{itemize}
+	} \vspace{-3.5mm}                                                                                     \\
+	\multicolumn{2}{c}{}
+	\\[-0.75em]
+	\textsc{2012 -- 2014}            & \textbf{Westminster College}, Salt Lake City, UT                   \\
+	                                 & \footnotesize{
+		\vspace{-3.5mm}
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Developed a novel Python program to algorithmically identify
+			      singing on the nest in hundreds of field recordings of Northern Mockingbirds.
+			\item Collected and and performed signal processing on hundreds of field recordings to compare urban
+			      and non-urban House Finch song dialects.
+		\end{itemize}
+	} \vspace{-3.5mm}                                                                                     \\
+	\multicolumn{2}{c}{}
+	\\[-0.75em]
+	\textsc{Jan. 2012 -- Jun. 2012}  & \textbf{University of Utah Health Care}, Salt Lake City, UT
+	\\ & \footnotesize{
+		\vspace{-3.5mm}
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Performed reverse transcription and PCR experiments to help identify genetic components of fibromyalgia and chronic fatigue
+		\end{itemize}
+	} \vspace{-3.5mm}                                                                                     \\
+\end{longtable}
+
+
+%Section: Languages
+\section{\color{linkcolour}{Programming Languages and Tooling}}
+\begin{longtable}{rp{12cm}}
+	\textsc{Python:}    & Used for data analysis, machine learning, and package development.                                    \\
+	                    & \small{\href{https://github.com/BradhamLab/icat}{https://github.com/BradhamLab/icat}}                 \\
+	\textsc{R:}         & Used for -omics data analysis and visualization.                                                      \\
+	                    & \small{\href{https://github.com/BradhamLab/scPipe}{https://github.com/BradhamLab/scPipe}}             \\
+	\textsc{Snakemake:} & Used to generate stable and modular pipeline workflows.                                               \\
+	                    & \small{\href{https://github.com/BradhamLab/indrops-star}{https://github.com/BradhamLab/indrops-star}} \\
+	\textsc{C++:}       & Extended existing Louvain library for semi-supervised clustering.                                     \\
+	                    & \small{\href{https://github.com/BradhamLab/sslouvain}{https://github.com/BradhamLab/sslouvain}}       \\
+	\textsc{git}:       & Used for version control and collaboration.                                                           \\
+	                    & \small{\href{https://github.com/dakota-hawkins}{https://github.com/dakota-hawkins}}                   \\
+	\textsc{conda}:     & Environment handling and package installation for reproducible analysis.                              \\
+	\textsc{linux}:     & Used for analysis in a high-performance cluster as well as daily use.                                 \\
+	\textsc{SQL}:       & Used to create lab databases for dataset annotation.                                                  \\
 \end{longtable}
 
 %Section: Publications
 \section{\color{linkcolour}{Publications}}
-\begin{tabular}{rp{10cm}}
+\begin{tabular}{rp{11cm}}
 	\textsc{2023} & \emph{ICAT: A Novel Algorithm to Identify Cell-types in scRNA-seq Perturbation Experiments}                                                                   \\
 	              & \small \textbf{Bioinformatics} \href{https://doi.org/10.1093/bioinformatics/btad278}{https://doi.org/10.1093/bioinformatics/btad278}                          \\
 	              & \footnotesize \textbf{Hawkins DY}, Zuch DT, Huth J, Rodríguez-Sastre N, McCutcheon KR, Glick A, Lion AT, Thomas CF, Descoteaux AE, Johnson WE, and Bradham CA \\
@@ -167,6 +239,113 @@
 	              & \footnotesize Zuch DT, \textbf{Hawkins DY}, Huth J, Rose S, Lamba A, Dionne K, Li C, Murray I, Patel V, Piacentino ML, and Bradham CA                         \\
 \end{tabular}
 
+%Section: Posters
+\section{\color{linkcolour}{Posters and Presentations}}
+\begin{longtable}{rp{11cm}}
+	\textsc{2021} & \emph{Optimizing Feature Selection in High-Dimensional RNA-seq Data}                                                   \\
+	              & \textbf{Annual Biomedical Research Conference for Minority Students}                                                   \\
+	              & \footnotesize Baringa ZI, \textbf{Hawkins DY}, and Bradham CA                                                          \\
+	              & \small{Award winning research presented by student mentee, Zoey Baringa}                                               \\
+	\textsc{2021} & \emph{A Pipeline for Constructing a 3D Coordinate Map of PMCs in Developing Embryos}                                   \\
+	              & \textbf{Annual Biomedical Research Conference for Minority Students}                                                   \\
+	              & \footnotesize Hughes MM, \textbf{Hawkins DY}, McCutcheon K, Glick A, Rodríguez-Sastre N, Bradham CA                    \\
+	              & \small{Research presented by student mentee, Madeline Hughes}                                                          \\
+	\textsc{2020} & \emph{ICAT: A Novel Method for Identifying Cell-types across
+	Treatments in Single-cell}                                                                                                             \\
+	              & \emph{RNA Sequencing Data}                                                                                             \\
+	              & \textbf{Bioinformatics Open House}                                                                                     \\
+	              & \footnotesize \textbf{Hawkins DY}, Zuch DT, Huth J, and Bradham CA                                                     \\
+	              & \small{Award-winning poster unveiling a new algorithm to accurately identify cell-types across biological conditions.} \\
+	\textsc{2019} & \emph{Subpopulation Discovery During Patterning-Induced
+	Developmental Diversification in Sea Urchin Embryos via Single-Cell RNA-Seq}                                                           \\
+	              & \textbf{Society for Developmental Biology}                                                                             \\
+	              & \footnotesize \textbf{Hawkins DY}, Zuch DT, Huth J, and Bradham CA                                                     \\
+	              & \small{Presented work showcasing subpopulation disruption
+	during perturbation experiments.}                                                                                                      \\
+	\textsc{2018} & \emph{Automated Identification of Primary Mesenchyme Cells
+	in Confocal Images}                                                                                                                    \\
+	              & \textbf{International Conference for the Developmental Biology of
+	the Sea Urchin XXV}                                                                                                                    \\
+	              & \footnotesize \textbf{Hawkins DY} and Bradham CA                                                                       \\
+	              & \small{Presented a computer vision algorithm to identify 3
+	Dimensional cell boundaries.}                                                                                                          \\
+	\textsc{2017} & \emph{Subpopulation Discovery During Patterning-Induced
+	Developmental Diversification in Sea Urchin Embryos via Single-Cell RNA-Seq}                                                           \\
+	              & \textbf{The International Workshop on Bioinformatics and Systems Biology}                                              \\
+	              & \footnotesize \textbf{Hawkins DY}, Shi X, Hackett W, Zuch DT, Huth J, and Bradham CA                                   \\
+	              & \small{Presented work identifying novel subpopulations of Primary
+	Mesenchyme Cells during sea urchin development.}                                                                                       \\
+
+	\textsc{2014} & \emph{Detecting Singing on the Nest}                                                                                   \\
+	              & \textbf{Westminster College Undergraduate Research Conference}                                                         \\
+	              & \footnotesize \textbf{Hawkins DY}, Sanchez K, Shepherd T, Stracey CM                                                   \\
+	              & \small{
+		Presented undergraduate work to automatically isolate bird songs in
+	field recordings.}                                                                                                                     \\
+
+	\textsc{2014} & \emph{An Interdisciplinary Quantitative Analysis and Research Cooperate (QUARC) at}                                    \\
+	              & \emph{Westminster College}                                                                                             \\
+	              & \textbf{Electronic Conference on Teaching Statistics}                                                                  \\
+	              & \footnotesize Bynum B and \textbf{Hawkins DY}                                                                          \\
+	              & \small{Helped present current activities and goals of QUARC to promote quantitative reasoning at}                      \\
+
+	\textsc{2014} & \emph{O Captain! My Captain!}                                                                                          \\
+	              & \textbf{Mathematical Association of America, Intermountain Section}                                                    \\
+	              & \footnotesize \textbf{Hawkins DY}, Graves A, Knowlton N.                                                               \\
+	              & \small{Presented methods to determine the best college sports coach over
+	the past century.}                                                                                                                     \\
+
+	\textsc{2014} & \emph{Introducing QUARC}                                                                                               \\
+	              & \textbf{Westminster College - Tutorpalooza}                                                                            \\
+	              & \footnotesize \textbf{Hawkins DY}                                                                                      \\
+	              & \small{Presented activities and goals of QUARC to fellow tutors and aids on Westminster campus.}                       \\
+
+	\textsc{2013} & \emph{Frequency Characteristics of Urban House Finch Songs}                                                            \\
+	              & \textbf{Ecological Society of America}                                                                                 \\
+	              & \footnotesize \textbf{Hawkins DY}, Shepherd T, Stracey CM                                                              \\
+	              & \small{Presented undergraduate research on house finch dialects in urban
+	areas within Salt Lake.}                                                                                                               \\
+
+	\textsc{2013} & \emph{Frequency Characteristics of Urban House Finch Songs}                                                            \\
+	              & \textbf{Utah Conference on Undergraduate Research}                                                                     \\
+	              & \footnotesize \textbf{Hawkins DY}, Shepherd T, Stracey CM                                                              \\
+	              & \small{Presented undergraduate research on house finch dialects in urban
+	areas within Salt Lake.}                                                                                                               \\
+\end{longtable}
+
+
+
+% Mentorship + Service
+\section{\color{linkcolour} Mentorship and Management}
+\begin{longtable}{rp{11cm}}
+	2017 -- 2023
+	 & Bradham Lab                                                                                                                                                                                                                                                                                                                                                                                     \\
+	 & \footnotesize{Mentored undergraduate researcher projects from inception to presentation at international conferences. Projects ranged from biomedical computer vision and machine learning projects, such as semantic segmentation of cell-types in 3D images, constructing a universal spatial coordinate system for developing embryos, and performance improvements in learning algorithms.} \\
+	2017 -- 2022
+	 & BRITE                                                                                                                                                                                                                                                                                                                                                                                           \\
+	 & \footnotesize{Mentored Summer undergraduate researchers for the
+		Bioinformatics Research and Interdisciplinary Training Experience (BRITE)
+		REU. Mentorship involved leading and creating workshops, overseeing
+	summer research projects, and coordinating students.}                                                                                                                                                                                                                                                                                                                                              \\
+	2017 -- 2021
+	 & BU Bioinformatics Student Association                                                                                                                                                                                                                                                                                                                                                           \\
+	 & \footnotesize{Organized social and recruiting events for the BU
+		Bioinformatics program. Responsibilities included establishing
+		support networks for PhD students, organizing meetings with faculty to
+	address student concerns, and organizing student advocate groups.}                                                                                                                                                                                                                                                                                                                                 \\
+	2017 -- 2021
+	 & First-year PhD Workshops                                                                                                                                                                                                                                                                                                                                                                        \\
+	 & \footnotesize{Organized and created computational workshops to quickly
+	introduce first-year PhD students to common computational tools for bioinformatic research, such R, Python, linux environments, and machine learning.}                                                                                                                                                                                                                                             \\
+	2018, 2019
+	 & BU Student Organized Symposium                                                                                                                                                                                                                                                                                                                                                                  \\
+	 & \footnotesize{Helped organize the annual symposium hosted by the BU
+		Bioinformatics program. Responsibilities included contacting and
+		coordinating with leading researchers to talk at the symposium,
+		leading day-of logistics, and advertising the event to the broader
+	scientific community in Boston.}                                                                                                                                                                                                                                                                                                                                                                   \\
+\end{longtable}
+
 
 %Section: Awards and Accolades
 \section{\color{linkcolour}{Honors and Awards}}
@@ -182,131 +361,6 @@
 	2012         & Scholars Summer Research Grant -- Westminster College
 \end{tabular}
 
-%Section: Posters
-\section{\color{linkcolour}{Posters and Presentations}}
-\begin{longtable}{ll}
-	\textsc{2021} & \emph{Optimizing Feature Selection in High-Dimensional RNA-seq Data}                                \\
-	              & \textbf{Annual Biomedical Research Conference for Minority Students}                                \\
-	              & \footnotesize Baringa ZI, \textbf{Hawkins DY}, and Bradham CA                                       \\
-	              & \small{Award winning research presented by student mentee, Zoey Baringa}                            \\
-	\textsc{2021} & \emph{A Pipeline for Constructing a 3D Coordinate Map of PMCs in Developing Embryos}                \\
-	              & \textbf{Annual Biomedical Research Conference for Minority Students}                                \\
-	              & \footnotesize Hughes MM, \textbf{Hawkins DY}, McCutcheon K, Glick A, Rodríguez-Sastre N, Bradham CA \\
-	              & \small{Research presented by student mentee, Madeline Hughes}                                       \\
-	\textsc{2020} & \emph{ICAT: A Novel Method for Identifying Cell-types across
-	Treatments in Single-cell}                                                                                          \\
-	              & \emph{RNA Sequencing Data}                                                                          \\
-	              & \textbf{Bioinformatics Open House}                                                                  \\
-	              & \footnotesize \textbf{Hawkins DY}, Zuch DT, Huth J, and Bradham CA                                  \\
-	              & \small{Award-winning poster unveiling a new algorithm to accurately identify cell-types}            \\
-	              & \small{across biological conditions.}                                                               \\
-	\textsc{2019} & \emph{Subpopulation Discovery During Patterning-Induced
-	Developmental Diversification}                                                                                      \\
-	              & \emph{in Sea Urchin Embryos via Single-Cell RNA-Seq}                                                \\
-	              & \textbf{Society for Developmental Biology}                                                          \\
-	              & \footnotesize \textbf{Hawkins DY}, Zuch DT, Huth J, and Bradham CA                                  \\
-	              & \small{Presented work showcasing subpopulation disruption
-	during perturbation experiments.}                                                                                   \\
-	\textsc{2018} & \emph{Automated Identification of Primary Mesenchyme Cells
-	in Confocal Images}                                                                                                 \\
-	              & \textbf{International Conference for the Developmental Biology of
-	the Sea Urchin XXV}                                                                                                 \\
-	              & \footnotesize \textbf{Hawkins DY} and Bradham CA                                                    \\
-	              & \small{Presented a computer vision algorithm to identify 3
-	Dimensional cell boundaries.}                                                                                       \\
-	\textsc{2017} & \emph{Subpopulation Discovery During Patterning-Induced
-	Developmental Diversification}                                                                                      \\
-	              & \emph{in Sea Urchin Embryos via Single-Cell RNA-Seq}                                                \\
-	              & \textbf{The International Workshop on Bioinformatics and Systems Biology}                           \\
-	              & \footnotesize \textbf{Hawkins DY}, Shi X, Hackett W, Zuch DT, Huth J, and Bradham CA                \\
-	              & \small{Presented work identifying novel subpopulations of Primary
-	Mesenchyme Cells during}                                                                                            \\
-	              & \small{sea urchin development.}                                                                     \\
-
-	\textsc{2014} & \emph{Detecting Singing on the Nest}                                                                \\
-	              & \textbf{Westminster College Undergraduate Research Conference}                                      \\
-	              & \footnotesize \textbf{Hawkins DY}, Sanchez K, Shepherd T, Stracey CM                                \\
-	              & \small{
-		Presented undergraduate work to automatically isolate bird songs in
-	field recordings.}                                                                                                  \\
-
-	\textsc{2014} & \emph{An Interdisciplinary Quantitative Analysis and Research Cooperate (QUARC) at}                 \\
-	              & \emph{Westminster College}                                                                          \\
-	              & \textbf{Electronic Conference on Teaching Statistics}                                               \\
-	              & \footnotesize Bynum B and \textbf{Hawkins DY}                                                       \\
-	              & \small{Helped present current activities and goals of QUARC to promote quantitative reasoning at}   \\
-
-	\textsc{2014} & \emph{O Captain! My Captain!}                                                                       \\
-	              & \textbf{Mathematical Association of America, Intermountain Section}                                 \\
-	              & \footnotesize \textbf{Hawkins DY}, Graves A, Knowlton N.                                            \\
-	              & \small{Presented methods to determine the best college sports coach over
-	the past century.}                                                                                                  \\
-
-	\textsc{2014} & \emph{Introducing QUARC}                                                                            \\
-	              & \textbf{Westminster College - Tutorpalooza}                                                         \\
-	              & \footnotesize \textbf{Hawkins DY}                                                                   \\
-	              & \small{Presented activities and goals of QUARC to fellow tutors and aids on Westminster campus.}    \\
-
-	\textsc{2013} & \emph{Frequency Characteristics of Urban House Finch Songs}                                         \\
-	              & \textbf{Ecological Society of America}                                                              \\
-	              & \footnotesize \textbf{Hawkins DY}, Shepherd T, Stracey CM                                           \\
-	              & \small{Presented undergraduate research on house finch dialects in urban
-	areas within Salt Lake.}                                                                                            \\
-
-	\textsc{2013} & \emph{Frequency Characteristics of Urban House Finch Songs}                                         \\
-	              & \textbf{Utah Conference on Undergraduate Research}                                                  \\
-	              & \footnotesize \textbf{Hawkins DY}, Shepherd T, Stracey CM                                           \\
-	              & \small{Presented undergraduate research on house finch dialects in urban
-	areas within Salt Lake.}                                                                                            \\
-\end{longtable}
-
-
-% Mentorship + Service
-\section{\color{linkcolour} Mentorship and Service}
-\begin{longtable}{rp{10cm}}
-	2017 -- Present
-	 & Bradham Lab                                                                                                                                              \\
-	 & \footnotesize{Mentored undergraduate researchers in biomedical computer vision projects. Projects ranged from scemantic segmentation of cell-types in 3D
-		images to constructing embryonic coordinate axes for developing
-	sea urchin embryos.}                                                                                                                                        \\
-	2017 -- 2022
-	 & BRITE                                                                                                                                                    \\
-	 & \footnotesize{Mentored Summer undergraduate researchers for the
-		Bioinformatics Research and Interdisciplinary Training Experience (BRITE)
-		REU. Mentorship involved leading and creating workshops, overseeing
-	summer research projects, and introducing students to academic research.}                                                                                   \\
-	2017 -- 2021
-	 & BU Bioinformatics Student Association                                                                                                                    \\
-	 & \footnotesize{Helped organize social and recruiting events for the BU
-		Bioinformatics program. Responsibilities also included establishing
-		support networks for PhD students, organizing meetings with faculty to
-	address student concerns, and organizing student advocate groups.}                                                                                          \\
-	2017 -- 2021
-	 & First-year PhD Workshops                                                                                                                                 \\
-	 & \footnotesize{Organized and created computation workshops to quickly
-		introduce first-year PhD students to common computational
-	tools for bioinformatic research.}                                                                                                                          \\
-	2018, 2019
-	 & BU Student Organized Symposium                                                                                                                           \\
-	 & \footnotesize{Helped organize the annual symposium hosted by the BU
-		Bioinformatics program. Responsibilities included contacting and
-		coordinating with leading researchers to talk at the symposium,
-		leading day-of logistics, and advertising the event to the broader
-	scientific community in Boston.}                                                                                                                            \\
-\end{longtable}
-
-%Section: Languages
-\section{\color{linkcolour}{Programming Languages}}
-\begin{tabular}{rl}
-	\textsc{Python:}    & Used for data analysis, machine learning, and package development.                                    \\
-	                    & \small{\href{https://github.com/BradhamLab/icat}{https://github.com/BradhamLab/icat}}                 \\
-	\textsc{R:}         & Used for -omics data analysis and visualization.                                                      \\
-	                    & \small{\href{https://github.com/BradhamLab/scPipe}{https://github.com/BradhamLab/scPipe}}             \\
-	\textsc{Snakemake:} & Used to generate stable and modular pipeline workflows.                                               \\
-	                    & \small{\href{https://github.com/BradhamLab/indrops-star}{https://github.com/BradhamLab/indrops-star}} \\
-	\textsc{C++:}       & Extended existing Louvain library for semi-supervised clustering.                                     \\
-	                    & \small{\href{https://github.com/BradhamLab/sslouvain}{https://github.com/BradhamLab/sslouvain}}       \\
-\end{tabular}
 
 
 \end{document}

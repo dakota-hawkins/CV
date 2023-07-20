@@ -22,6 +22,7 @@
 \usepackage{hyperref}
 \usepackage{longtable}
 \usepackage[none]{hyphenat}
+\usepackage{ragged2e}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 %FONTS
@@ -85,42 +86,23 @@
 
 %Section: Education
 \section{\color{linkcolour}{Education}}
-\begin{tabular}{rl}
-	\textsc{2016 -- 2023} & Doctor of Philosophy, \textbf{Boston University}, Boston, MA          \\
-	                      & Bioinformatics | Cynthia A. Bradham Laboratory                        \\
+\begin{tabular}{rp{11.5cm}}
+	\textsc{2016 -- 2023} & Doctor of Philosophy, \textbf{Boston University}, Boston, MA                                                                                                                                                 \\
+	                      & Bioinformatics | Cynthia A. Bradham Laboratory                                                                                                                                                               \\
+	                      & \RaggedRight{ \small \textbf{Thesis}: \emph{\footnotesize{Understanding Cell-Type Diversification During Developmental Pattern Formation in Sea urchin Embryos Using Single Cell and Molecular Approaches}}} \\
 
-	\textsc{2010 -- 2015} & Bachelor of Science, \textbf{Westminster College}, Salt Lake City, UT \\
-	                      & \emph{cum laude} | Majors: Biology and Mathematics                    \\
-\end{tabular}
-
-%Section: Work Experience at the top
-\section{\color{linkcolour}{Professional History}}
-\begin{tabular}{r|p{11cm}}
-	\textsc{2016 -- 2023} & Boston University, Boston, MA                                                                                                                                                              \\
-	                      & Doctoral Student                                                                                                                                                                           \\
-	                      & \textbf{Thesis}: \emph{\footnotesize{Understanding Cell-Type Diversification During Developmental Pattern Formation in Sea urchin Embryos Using Single Cell and Molecular Approaches}}     \\
-	\multicolumn{2}{c}{}                                                                                                                                                                                               \\[-0.5em]
-	\textsc{2015 -- 2016} & Pacific Northwest National Laboratory, Richland, WA                                                                                                                                        \\
-	                      & \emph{Post Baccalaureate Research Assistant}                                                                                                                                               \\
-	                      & \footnotesize{Worked in the Applied Statistics and Computational Modeling
-	group under the Computational and Statistical Analysis division. Developed new quantitative tools across various projects to analyize -omics datasets, including microbiome, metabolomic, and proteomic projects.} \\
-	\multicolumn{2}{c}{}                                                                                                                                                                                               \\[-0.5em]
-
-	\textsc{2013 -- 2015} & Westminster College, Salt Lake City, UT                                                                                                                                                    \\
-	                      & \emph{QUARC Student Statistics Consultant}                                                                                                                                                 \\
-	                      & \footnotesize{Helped develop quantitative reasoning on Westminster College Campus.
-		Responsibilities focused on aiding in statistical analysis for
-		local projects, teaching in-class lessons, and devoloping new
-	quantitative literacy courses for Westminster College}                                                                                                                                                             \\
-	\multicolumn{2}{c}{}                                                                                                                                                                                               \\
+	\textsc{2010 -- 2015} & Bachelor of Science, \textbf{Westminster College}, Salt Lake City, UT                                                                                                                                        \\
+	                      & \emph{cum laude} | Majors: Biology and Mathematics                                                                                                                                                           \\
+	                      & \RaggedRight{\small \textbf{Research}: signal processing to detect anomalous singing on the nest in Mockingbirds and characterize urban vs non-urbon in Finch song dialects}
 \end{tabular}
 
 %Section: Research
-\section{\color{linkcolour}{Selected Research}}
+\section{\color{linkcolour}{Recent Professional History}}
 % \begin{tabular}{rp{10cm}}
-\begin{longtable}{r|p{10cm}}
-	\textsc{May 2017 -- Jun. 2023}   & \textbf{Cyndi Bradham Laboratory} Boston University, Boston, MA    \\
-	                                 & \footnotesize{
+\begin{longtable}{r|p{10.5cm}}
+	\textsc{May 2017 -- Jun. 2023}  & \textbf{Boston University}, Boston, MA                                         \\
+	                                & \small \emph{Doctoral Student} - Bradham Lab                                   \\
+	                                & \footnotesize{
 		\vspace{-3.5mm}
 		% \hspace{-5mm}
 		\begin{itemize}
@@ -128,53 +110,37 @@
 			% \setlength\leftmargini{-5mm}
 			% \setlength\leftmarginii{-5mm}
 			\item Developed a novel machine learning algorithm to accurately identify cell states in mixed-condition scRNA-seq datasets.
-			\item Mechanisictly characterized cell type diversication of skeletal lineage cells in sea urchins using multi-condition scRNA-seq data consisting of 5 time points and 6 experimental conditions.
-			\item Developed novel computational and machine learning workflows to integrate 3D single-molecule fluorescence imaging data with scRNA-seq data to infer embryonic locations of scRNA-seq defined cell types.
+			\item Mechanistically characterized cell type diversification of skeletal lineage cells in sea urchins using multi-condition scRNA-seq data consisting of 5 time points, 6 experimental conditions, and 10s of thousands of cells.
+			\item Developed novel computational and machine learning workflows to integrate 3D smFISH imaging data with scRNA-seq data to infer embryonic locations of scRNA-seq defined cell types.
 		\end{itemize}
-	} \vspace{-3.5mm}                                                                                     \\
-	\multicolumn{2}{c}{}                                                                                  \\[-0.75em]
-	\textsc{Jan. 2017 -- May 2017}   & \textbf{Paola Sebastiani Laboratory} Boston University, Boston, MA \\
-	                                 & \footnotesize{
+	} \vspace{-3.5mm}                                                                                                \\
+	\multicolumn{2}{c}{}                                                                                             \\[-0.75em]
+	\textsc{Jul. 2016 -- May 2017}  & \textbf{Boston University}, Boston, MA                                         \\
+	                                & \small \emph{Doctoral Rotation Student} - Sebastiani, Monti, and Gallagan Labs \\
+	                                & \footnotesize{
 		\vspace{-3.5mm}
 		\begin{itemize}
 			\setlength\itemsep{0em}
 			\item Performed eQTL analysis on whole-genome and bulk RNA-seq data to establish tissue-specific biomarkers for Alzheimer's disease.
-		\end{itemize}
-	} \vspace{-3.5mm}                                                                                     \\
-	\multicolumn{2}{c}{}
-	\\[-0.75em]
-	\textsc{Sept. 2016 -- Dec. 2016} & \textbf{Stefano Monti Laboratory} Boston University, Boston, MA    \\
-	                                 & \footnotesize{
-		\vspace{-3.5mm}
-		\begin{itemize}
-			\setlength\itemsep{0em}
 			\item Determined cancer-specific immune response in
 			      tumor cells by leveraging general linear models to identify key signatures in bulk RNA-seq.
-		\end{itemize}
-	} \vspace{-3.5mm}                                                                                     \\
-	\multicolumn{2}{c}{}
-	\\[-0.75em]
-	\textsc{Jul. 2016 -- Sept. 2016} & \textbf{James Galagan Laboratory} Boston University, Boston, MA    \\                                                                  	                                 & \footnotesize{
-		\vspace{-3.5mm}
-		\begin{itemize}
-			\setlength\itemsep{0em}
 			\item Conducted and analyzed ChIP-seq and RNA-seq experiments to help map the transcriptional
 			      regulatory network of \emph{E.\ coli}.
 		\end{itemize}
-	} \vspace{-3.5mm}                                                                                     \\
+	} \vspace{-3.5mm}                                                                                                \\
 	\multicolumn{2}{c}{}
 	\\[-0.75em]
-	\textsc{Jul. 2015 -- Jul. 2016}  & \textbf{Pacific Northwest National Laboratory}, Richland, WA       \\
-	                                 & \footnotesize{
+	\textsc{Jul. 2015 -- Jul. 2016} & \textbf{Pacific Northwest National Laboratory}, Richland, WA                   \\
+	                                & \small \emph{Research Assistant} - Applied Stats. and Comp. Modeling Group     \\
+	                                & \footnotesize{
 		\vspace{-3.5mm}
 		\begin{itemize}
 			\setlength\itemsep{0em}
-			\item Performed multi-omic analysis to identify key signal differences in metabolomic consumption and microbiome composition between successful and
-			      unsuccessful gastric bypass patients.
-			\item Ran analysis pipelines for protein-based stable isotope experiments to generate final results and summary statistics.
+			\item Performed multi-omic analysis to identify key differences in metabolomic consumption and microbiome composition between gastric bypass patients.
 			\item Created software workflows to visualize and quantify spliceforms in high-throughput proteomic data.
 		\end{itemize}
-	} \vspace{-3.5mm}                                                                                     \\
+	} \vspace{-3.5mm}                                                                                                \\
+	\multicolumn{2}{c}{}                                                                                             \\[-0.75em]
 \end{longtable}
 
 
@@ -197,7 +163,7 @@
 \end{longtable}
 
 %Section: Publications
-\section{\color{linkcolour}{Selected Publications}}
+\section{\color{linkcolour}{Recent Publications}}
 \begin{tabular}{rp{11cm}}
 	\textsc{2023} & \emph{ICAT: A Novel Algorithm to Identify Cell-types in scRNA-seq Perturbation Experiments}                                                                   \\
 	              & \small \textbf{Bioinformatics} \href{https://doi.org/10.1093/bioinformatics/btad278}{https://doi.org/10.1093/bioinformatics/btad278}                          \\
@@ -212,33 +178,85 @@
 
 % Mentorship + Service
 \section{\color{linkcolour} Mentorship and Management}
-\begin{longtable}{rp{11cm}}
+\begin{longtable}{rp{11.5cm}}
 	2017 -- 2023
-	 & Bradham Lab                                                                                                                                                                                                                                                                                                                                                                                     \\
-	 & \footnotesize{Mentored undergraduate researchers from  projec inception to presentation at international conferences. Projects ranged from biomedical computer vision and machine learning projects, such as semantic segmentation of cell-types in 3D images, constructing a universal spatial coordinate system for developing embryos, and performance improvements in learning algorithms.} \\
+	 & Bradham Lab                                                                                                                                                                 \\[0.225em]
+	 & \small Mentored undergraduate researchers from  project inception to presentation at national conferences.                                                                  \\
+
+	 & \begin{itemize}
+		   \vspace{-3.5mm}
+		   \footnotesize{\item \emph{Optimizing Feature Selection in High-Dimensional RNA-seq Data}\newline
+		         \textbf{Annual Biomedical Research Conference for Minority Students} (2021)\newline
+		         Baringa ZI, \textbf{Hawkins DY}, and Bradham CA}
+		   \item \emph{A Pipeline for Constructing a 3D Coordinate Map of PMCs in Developing Embryos} \newline
+		         \textbf{Annual Biomedical Research Conference for Minority Students} (2021)\newline
+		         \footnotesize Hughes MM, \textbf{Hawkins DY}, ..., Bradham CA
+		   \item \emph{The Application of V-Net in Identifying Primary Mesenchyme Cells in Sea Urchin Embryo Images} \newline
+		         \textbf{Annual Biomedical Research Conference for Minority Students} (2018)\newline
+		         Price M, \textbf{Hawkins DY}, Shapiro N, Bradham CA
+		         \vspace{-3.5mm}
+	   \end{itemize}                                                           \\
 	2017 -- 2022
-	 & BRITE                                                                                                                                                                                                                                                                                                                                                                                           \\
-	 & \footnotesize{Mentored Summer undergraduate researchers for the
-		BRITE REU hosted by BU. Mentorship involved leading and creating workshops, overseeing
-	summer research projects, and coordinating students.}                                                                                                                                                                                                                                                                                                                                              \\
+	 & \textbf{\underline{B}}ioinformatics \textbf{\underline{R}}esearach and \textbf{\underline{I}}nterdisciplinary \textbf{\underline{T}}raining \textbf{\underline{E}}xperience \\[0.225em]
+	 & \begin{itemize}
+		   \vspace{-3.5mm}
+		   \small{
+		   \item Mentored Summer undergraduate researchers for the
+		         BU BRITE REU.
+		   \item Created, led, and scheduled summer-long workshop series on bioinformatic fundamentals including Python, R, machine learning, and workflow languages.
+		   \item  Coordinated social events and extracurricular activities for visiting students.}
+		         \vspace{-3.5mm}
+	   \end{itemize}
+	\\[-1em]
 	2017 -- 2021
-	 & BU Bioinformatics Student Association                                                                                                                                                                                                                                                                                                                                                           \\
-	 & \footnotesize{Organized social and recruiting events for the BU
-		Bioinformatics program. Responsibilities included establishing
-		support networks for PhD students, organizing meetings with faculty to
-	address student concerns, and organizing student advocate groups.}                                                                                                                                                                                                                                                                                                                                 \\
+	 & BU Bioinformatics Student Association                                                                                                                                       \\[0.225em]
+	 & \begin{itemize}
+		   \vspace{-3.5mm}
+		   \small{
+		   \item Organized social and recruiting events for the BU
+		         Bioinformatics program.
+		   \item Established
+		         support networks and resources for 50+ PhD students.
+		   \item Established and organized quarterly meetings with program administration.
+		         }
+		         \vspace{-3.5mm}
+	   \end{itemize}                                                                                              \\[-1em]
 	2017 -- 2021
-	 & First-year PhD Workshops                                                                                                                                                                                                                                                                                                                                                                        \\
-	 & \footnotesize{Organized and created computational workshops to quickly
-	introduce first-year PhD students to common computational tools for bioinformatic research, such R, Python, linux environments, and machine learning.}                                                                                                                                                                                                                                             \\
+	 & First-year PhD Workshops                                                                                                                                                    \\[0.2em]                                                                                                                                                                            & \begin{itemize}
+		\vspace{-3.5mm}
+		\small{
+		\item Organized computational workshops to quickly
+		      introduce first-year PhD students to common computational tools for bioinformatic research.
+		      }
+		      \vspace{-3.5mm}
+	\end{itemize}
+	\\
 	2018, 2019
-	 & BU Student Organized Symposium                                                                                                                                                                                                                                                                                                                                                                  \\
-	 & \footnotesize{Helped organize the annual symposium hosted by the BU
-		Bioinformatics program. Responsibilities included contacting and
-		coordinating with leading researchers to talk at the symposium,
-		leading day-of logistics, and advertising the event to the broader
-	scientific community in Boston.}                                                                                                                                                                                                                                                                                                                                                                   \\
+	 & BU Student Organized Symposium                                                                                                                                              \\[0.2em]
+	 & \begin{itemize}
+		   \vspace{-3.5mm}
+		   \small{
+		   \item Contacted and coordinated with invited researchers.
+		   \item Led day-of logistics and helped advertise the event to the broader Boston scientific community.
+		         }
+		         \vspace{-3.5mm}
+	   \end{itemize}                                                                        \\
 \end{longtable}
+
+
+%Section: Awards and Accolades
+\section{\color{linkcolour}{Honors and Awards}}
+\begin{tabular}{rl}
+	2022         & Bioinformatics Service Award                                           \\
+	2020         & 1st Place Poster -- Bioinformatics Open House, Boston University       \\
+	2017         & 2nd Place Poster -- IBSB Conference, Berlin Germany                    \\
+	2016         & NIH Trainee Fellowship -- Boston University                            \\
+	2016         & Outstanding Performance Award -- Pacific Northwest National Laboratory \\
+	2014, 2015   & Honorable Mention -- Mathematical Competition in Modeling              \\
+	2013 -- 2015 & Gore Math/Science Scholarship -- Wesminster College                    \\
+	2013, 2014   & Gore Math/Science Summer Research Grant -- Westminster College         \\
+	2012         & Scholars Summer Research Grant -- Westminster College
+\end{tabular}
 
 \end{document}
 
